@@ -1,0 +1,85 @@
+.index-img {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+}
+
+.header-title {
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.index-img .fadeout {
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+    opacity: 0;
+}
+
+.index-img .fadein {
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+    opacity: 1;
+}
+
+.scroll {
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    width: 90%;
+    min-height: 210rpx;
+    background: #ffffff;
+    border-radius: 20rpx;
+    margin: auto auto 40rpx;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+
+.card-icon {
+    width: 110rpx;
+    height: 110rpx;
+    float: left;
+    margin: 50rpx 35rpx;
+}
+
+.card-t1 {
+    font-size: 45rpx;
+    padding-top: 50rpx;
+    font-weight: bolder;
+}
+
+.card-t2 {
+    padding: 25rpx 35rpx 35rpx 25rpx;
+    line-height: 40rpx;
+    font-size: 27rpx;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, .6);
+}
+
+.footer {
+    padding: 60rpx 0 100rpx 0;
+    text-align: center;
+}
+
+.footer-t1 {
+    line-height: 60rpx;
+    font-size: 30rpx;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, .6);
+}
+
+.footer-t2 {
+    line-height: 60rpx;
+    font-size: 25rpx;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, .5);
+}

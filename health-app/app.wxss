@@ -1,0 +1,10 @@
+page {
+    letter-spacing: 1px;
+    background: #f6f7f8;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}

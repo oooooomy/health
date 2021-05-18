@@ -1,0 +1,22 @@
+<header title="个人信息"/>
+
+<view class="main">
+    <van-cell-group>
+        <van-field
+                value="{{ username }}"
+                required
+                clearable
+                label="姓名"
+                icon="question-o"
+                placeholder="请输入姓名"
+        />
+        <van-field
+                value="{{ password }}"
+                type="password"
+                label=" 密码"
+                placeholder="请输入密码"
+                required
+                border="{{ false }}"
+        />
+    </van-cell-group>
+</view>

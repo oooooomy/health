@@ -1,0 +1,11 @@
+<view class="progress-box">
+    <progress percent="100"
+              wx:if="{{showProgress}}"
+              duration="10"
+              color="#0066ff"
+              backgroundColor="#f6f7f8"
+              active="{{true}}"
+              bindactiveend="progressEnd"
+              stroke-width="1"/>
+    <view wx:if="{{!showProgress}}" style="width:100%;height:1px;"/>
+</view>
