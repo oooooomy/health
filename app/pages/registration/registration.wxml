@@ -1,6 +1,6 @@
 <cu-custom bgColor="bg-white" isBack="{{true}}">
     <view slot="backText">返回</view>
-    <view slot="content">健康登记</view>
+    <view slot="content">填写表单</view>
 </cu-custom>
 
 <view class="form-item">
@@ -16,11 +16,11 @@
         <radio-group name="fever">
             <view class="radio-title">是否有发热、发烧的情况出现?</view>
             <view class="radio-item">
-                <label><radio value="true"/>是
+                <label><radio disabled="{{!canEdit}}" checked="{{form.fever}}" value="true"/>是
                 </label>
             </view>
             <view>
-                <label><radio value="false"/>否
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.fever}}" value="false"/>否
                 </label>
             </view>
         </radio-group>
@@ -29,11 +29,11 @@
         <radio-group name="cough">
             <view class="radio-title">是否有咳嗽状况出现?</view>
             <view class="radio-item">
-                <label><radio value="true"/>是
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.cough}}" value="true"/>是
                 </label>
             </view>
             <view>
-                <label><radio value="false"/>否
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.cough}}" value="false"/>否
                 </label>
             </view>
         </radio-group>
@@ -42,11 +42,11 @@
         <radio-group name="weak">
             <view class="radio-title">是否有乏力或轻微乏力的情况出现?</view>
             <view class="radio-item">
-                <label><radio value="true"/>是
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.weak}}" value="true"/>是
                 </label>
             </view>
             <view>
-                <label><radio value="false"/>否
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.weak}}" value="false"/>否
                 </label>
             </view>
         </radio-group>
@@ -55,11 +55,11 @@
         <radio-group name="contact">
             <view class="radio-title">是否有接触过或间接接触过确诊患者?</view>
             <view class="radio-item">
-                <label><radio value="true"/>是
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.contact}}" value="true"/>是
                 </label>
             </view>
             <view>
-                <label><radio value="false"/>否
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.contact}}" value="false"/>否
                 </label>
             </view>
         </radio-group>
@@ -68,11 +68,11 @@
         <radio-group name="area">
             <view class="radio-title">是否去过武汉、信阳、黑龙江等疫情较严重的地区?</view>
             <view class="radio-item">
-                <label><radio value="true"/>是
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.area}}" value="true"/>是
                 </label>
             </view>
             <view>
-                <label><radio value="false"/>否
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.area}}" value="false"/>否
                 </label>
             </view>
         </radio-group>
@@ -81,11 +81,11 @@
         <radio-group name="quarantine">
             <view class="radio-title">是否曾被地方医院隔离?</view>
             <view class="radio-item">
-                <label><radio value="true"/>是
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.quarantine}}" value="true"/>是
                 </label>
             </view>
             <view>
-                <label><radio value="false"/>否
+                <label><radio disabled="{{!canEdit}}" checked="{{!form.quarantine}}" value="false"/>否
                 </label>
             </view>
         </radio-group>
@@ -93,14 +93,14 @@
     <view class="form-item">
         <view>
             <text class="radio-title">当前定位</text>
-            <text class="onLocation" bind:tap="onLocation">
+            <text wx:if="{{canEdit}}" class="onLocation" bind:tap="onLocation">
                 <text style="color:#0081ff;" class="cuIcon-focus lg text-gray"></text>获取定位
             </text>
         </view>
-        <textarea name="location" value="{{location}}" disabled="{{true}}" placeholder="请获取你的定位信息"
+        <textarea name="location" value="{{form.location}}" disabled="{{true}}" placeholder="请获取你的定位信息"
                   class="location"/>
     </view>
-    <button class="btn bg-blue" formType="submit">提交表单</button>
+    <button class="btn bg-blue" disabled="{{!canEdit}}" formType="submit">提交表单</button>
 </form>
 
 <footer/>

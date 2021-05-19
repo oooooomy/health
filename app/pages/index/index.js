@@ -25,7 +25,7 @@ Page({
 
     onClickRegistration() {
         wx.navigateTo({
-            url: '/pages/registration/registration'
+            url: '/pages/health-form/health-form'
         })
     },
 

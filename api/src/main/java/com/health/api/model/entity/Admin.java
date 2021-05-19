@@ -20,14 +20,10 @@ public class Admin {
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
 
-    private String name;
-
-    private String mobile;
+    private String email;
 
     private String password;
 
-    private int pay;
-
-    private String role;
+    private String createAt;
 
 }

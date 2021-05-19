@@ -5,6 +5,11 @@ import java.text.SimpleDateFormat;
 
 public final class DataTimeUtil {
 
+    public static String getTodayString() {
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        return df.format(System.currentTimeMillis());
+    }
+
     public static String getNowTimeString() {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return df.format(System.currentTimeMillis());

@@ -7,7 +7,8 @@
     "pages/registration/registration",
     "pages/message/message",
     "pages/out-request/out-request",
-    "pages/material-request/material-request"
+    "pages/material-request/material-request",
+    "pages/health-form/health-form"
   ],
   "window": {
     "backgroundTextStyle": "light",

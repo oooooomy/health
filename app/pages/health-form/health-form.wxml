@@ -1,0 +1,44 @@
+<cu-custom bgColor="bg-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">健康登记</view>
+</cu-custom>
+
+<view class="bg-img bg-mask padding-tb-xl"
+      style="background-image: url('https://gaoyuanming-photo.oss-cn-beijing.aliyuncs.com/health/a1.jpeg');height: 414rpx;">
+    <view class="padding-xl text-white">
+        <view class="padding-xs text-xl">
+            群防群控、战胜疫情
+        </view>
+        <view class="padding-xs" style="line-height: 42rpx;">
+            Mass prevention and control to overcome epidemic situation.
+        </view>
+    </view>
+</view>
+
+<view class="form-item">
+    <view class="title">
+        2021年疫情返乡人员每日健康登记
+    </view>
+    <view class="time">
+        为掌握疫情风险期间返乡人员的具体数据，响应国家的号召，我们需要仔细进行健康上报，下列信息是我本人填写，本人对上报内容的真实性和完整性负责，如果信息有误或缺失，本人愿意承担相应的法律责任。同时本人遵守疫情防控的各项规定，并配合听从各项措施及要求。
+    </view>
+</view>
+
+<view style="padding: 0 30rpx">
+    <van-divider contentPosition="center">完成情况</van-divider>
+</view>
+
+<view class="cu-list grid col-5 no-border">
+    <view bind:tap="onclickPost" data-type="new" class="cu-item" wx:if="{{!todayFrom}}">
+        <view class="my-item blue">
+            <text style="line-height: 80rpx;color:#ffffff;">今天</text>
+        </view>
+    </view>
+    <view bind:tap="onclickPost" data-type="old" data-form="{{item}}" class="cu-item" wx:for="{{list}}" wx:key="index">
+        <view class="my-item">
+            <text style="line-height: 80rpx;">{{ item.createAt }}</text>
+        </view>
+    </view>
+</view>
+
+<footer/>

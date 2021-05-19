@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "footer": "/components/footer/footer",
+    "van-divider": "@vant/weapp/divider/index"
+  }
+}

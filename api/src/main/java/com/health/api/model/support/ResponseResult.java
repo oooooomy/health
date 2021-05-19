@@ -14,7 +14,7 @@ public class ResponseResult<T> {
     /**
      * 默认返回
      */
-    private ResponseResult() {
+    public ResponseResult() {
         this.status = true;
         this.msg = "request ok";
         this.data = null;

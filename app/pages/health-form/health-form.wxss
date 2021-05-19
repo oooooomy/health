@@ -1,0 +1,41 @@
+page {
+    background: #ffffff;
+}
+
+image {
+    width: 100vw;
+}
+
+.form-item {
+    padding: 20rpx 30rpx;
+    margin-bottom: 20rpx;
+    background: #ffffff;
+}
+
+.title {
+    line-height: 60rpx;
+    font-size: 40rpx;
+    font-weight: 500;
+}
+
+.time {
+    padding: 20rpx 0;
+    line-height: 50rpx;
+    font-size: 25rpx;
+    color: rgba(0, 0, 0, .6);
+}
+
+.my-item {
+    border-radius: 50%;
+    width: 100rpx;
+    margin-left: 20rpx;
+    height: 100rpx;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.blue {
+    background: #0066ff;
+    color: #ffffff;
+}
