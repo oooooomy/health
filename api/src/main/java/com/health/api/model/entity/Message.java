@@ -11,30 +11,30 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * 消息公告
+ * 用户留言
  */
 @Data
-@Table(name = "t_notice")
+@Table(name = "t_message")
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Notice {
+public class Message {
 
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
 
-    //主题
-    private String topic;
-
-    //通知内容
+    //留言内容
     private String content;
 
-    //海报 image id
-    private String poster;
+    //回复内容
+    private String reply;
 
     //创建时间
     private String createAt;
+
+    //回复时间
+    private String replayAt;
 
 }

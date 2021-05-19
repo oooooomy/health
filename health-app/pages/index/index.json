@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "van-transition": "@vant/weapp/transition/index",
-    "van-nav-bar": "@vant/weapp/nav-bar/index"
-  }
-}

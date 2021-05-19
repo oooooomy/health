@@ -1,0 +1,51 @@
+page {
+    letter-spacing: 1px;
+}
+
+.form-item {
+    padding: 20rpx 30rpx;
+    margin-bottom: 20rpx;
+    background: #ffffff;
+}
+
+.title {
+    line-height: 60rpx;
+    font-size: 40rpx;
+    font-weight: 500;
+}
+
+.time {
+    padding: 20rpx 0;
+    font-size: 25rpx;
+    color: rgba(0, 0, 0, .6);
+}
+
+.radio-item {
+    margin-bottom: 30rpx;
+}
+
+.radio-title {
+    line-height: 80rpx;
+    font-weight: bolder;
+}
+
+radio {
+    margin-right: 15rpx;
+}
+
+.btn {
+    margin: 40rpx 25rpx;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.onLocation {
+    padding-top: 20rpx;
+    float: right;
+    color: #0081ff;
+}
+
+.location {
+    padding: 25rpx 0;
+    line-height: 50rpx;
+}

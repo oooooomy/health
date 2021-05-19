@@ -5,6 +5,7 @@ import com.health.api.model.entity.User;
 import com.health.api.model.params.UserLoginParams;
 import com.health.api.repository.UserRepository;
 import com.health.api.service.UserService;
+import com.health.api.utils.DataTimeUtil;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -44,6 +45,18 @@ public class UserServiceImpl implements UserService {
             return user;
         }
         return userOptional.get();
+    }
+
+    @Override
+    public User update(User user) {
+        user.setUpdateAt(DataTimeUtil.getNowTimeString());
+        return userRepository.save(user);
+    }
+
+    @Override
+    public User findById(String id) {
+        Optional<User> optional = userRepository.findById(id);
+        return optional.isEmpty() ? null : optional.get();
     }
 
 }

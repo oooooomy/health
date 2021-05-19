@@ -6,4 +6,8 @@ public interface UserService {
 
     User sign(String code) throws Exception;
 
+    User update(User user);
+
+    User findById(String id);
+
 }

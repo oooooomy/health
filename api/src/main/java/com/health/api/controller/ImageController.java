@@ -37,6 +37,12 @@ public class ImageController {
         return new ResponseResult<>(imageService.save(file));
     }
 
+    /**
+     * 根据url展示图片
+     * @param id 图片id
+     * @param response .
+     * @throws IOException .
+     */
     @GetMapping("{id}")
     public void get(@PathVariable String id, HttpServletResponse response) throws IOException {
         Image image = imageService.getById(id);

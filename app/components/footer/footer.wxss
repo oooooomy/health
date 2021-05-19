@@ -1,0 +1,19 @@
+.footer {
+    letter-spacing: 1px;
+    padding: 80rpx 0 100rpx 0;
+    text-align: center;
+}
+
+.footer-t1 {
+    line-height: 60rpx;
+    font-size: 30rpx;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, .5);
+}
+
+.footer-t2 {
+    line-height: 60rpx;
+    font-size: 25rpx;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, .4);
+}

@@ -22,7 +22,7 @@ public class Image {
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
 
-    //文件内容
+    //文件二进制字节数组内容
     @Column(columnDefinition = "longblob")
     private byte[] bytes;
 

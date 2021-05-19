@@ -1,0 +1,41 @@
+<van-transition show="{{ show }}" custom-class="block">
+    <image class="index-img" mode="widthFix" src="../../assets/img/home.jpg"/>
+</van-transition>
+
+<scroll-view class="scroll"
+             scroll-y="{{true}}"
+             upper-threshold="250px"
+             bindscroll="scroll">
+    <view style="height:62vw;width:100vw;"/>
+    <view class="card" bind:tap="onClickRegistration">
+        <image class="card-icon" src="../../assets/img/form.svg"/>
+        <view class="card-t1">健康登记</view>
+        <view class="card-t2">返乡人员每日健康登记</view>
+    </view>
+    <view class="card" bind:tap="onClickNotice">
+        <image class="card-icon" src="../../assets/img/notice.svg"/>
+        <view class="card-t1">最新公告</view>
+        <view class="card-t2">疫情相关最新动态</view>
+    </view>
+    <view class="card" bind:tap="onClickMessage">
+        <image class="card-icon" src="../../assets/img/msg.svg"/>
+        <view class="card-t1">留言反馈</view>
+        <view class="card-t2">向我们的工作人员留言</view>
+    </view>
+    <view class="card" bind:tap="onClickRequestOut">
+        <image class="card-icon" src="../../assets/img/out.svg"/>
+        <view class="card-t1">申请外出</view>
+        <view class="card-t2">返乡人员外出申请（如果身体有任何异常现象请勿申请）</view>
+    </view>
+    <view class="card" bind:tap="onClickRequestMaterial">
+        <image class="card-icon" src="../../assets/img/commodity.svg"/>
+        <view class="card-t1">物资申请</view>
+        <view class="card-t2">隔离人员申请生活物资</view>
+    </view>
+    <view bind:tap="onClickMe" class="card">
+        <image class="card-icon" src="../../assets/img/me.svg"/>
+        <view class="card-t1">个人信息</view>
+        <view class="card-t2">个人信息完善查看</view>
+    </view>
+    <footer/>
+</scroll-view>

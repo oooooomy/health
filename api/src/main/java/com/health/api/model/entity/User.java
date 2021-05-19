@@ -1,5 +1,6 @@
 package com.health.api.model.entity;
 
+import com.health.api.utils.DataTimeUtil;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,27 +15,40 @@ public class User {
     @Id
     private String id;
 
-    private String idCard;
-
-    private Integer age;
-
+    //真实姓名
     private String name;
 
+    //性别
     private String gender;
 
+    //联系方式
     private String mobile;
 
+    //所在地区
     private String address;
 
-    private String healthCode;
+    //头像
+    private String avatar;
 
-    private Integer statusCode;
+    //身份证号
+    private String number;
 
-    private long createAt;
+    //身份证正面照
+    private String cardImageId;
+
+    //返乡时间
+    private String returnAt;
+
+    //注册时间
+    @Column(updatable = false)
+    private String createAt;
+
+    //更新时间
+    private String updateAt;
 
     public User(String id) {
         this.id = id;
-        this.createAt = System.currentTimeMillis();
+        this.createAt = DataTimeUtil.getNowTimeString();
     }
 
 }

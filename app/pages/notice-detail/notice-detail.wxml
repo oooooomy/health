@@ -1,0 +1,25 @@
+<cu-custom bgColor="bg-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">公告详情</view>
+</cu-custom>
+
+<view class="title">
+    支持，需要小程序基础库版本不低于 2.3.1 在小程序插件中使用时
+</view>
+
+<view class="time">发布时间: 2021-05-19 18:09:00</view>
+
+<view class="con">
+    <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"/>
+</view>
+
+<view class="t">
+    是否带上登录态信息。当 withCredentials 为 true 时，要求此前有调用过 wx.login 且登录态尚未过期，此时返回的数据会包含 encryptedData, iv 等敏感信息；当 withCredentials
+    为 false 时，不要求有登录态，返回的数据不包含 encryptedData, iv 等敏感信息。是否带上登录态信息。当 withCredentials 为 true 时，要求此前有调用过 wx.login
+    且登录态尚未过期，此时返回的数据会包含 encryptedData, iv 等敏感信息；当 withCredentials
+    为 false 时，不要求有登录态，返回的数据不包含 encryptedData, iv 等敏感信息。
+</view>
+<view class="footer">
+    <text style="float:right;">@疫情返乡人员管理系统</text>
+    <text style="float:left;">阅读: 13</text>
+</view>

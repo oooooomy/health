@@ -1,0 +1,40 @@
+page {
+    background: #ffffff;
+    letter-spacing: 1px;
+}
+
+.title {
+    padding: 15rpx 30rpx;
+    line-height: 60rpx;
+    font-size: 35rpx;
+    font-weight: 500;
+}
+
+.time {
+    padding: 0 30rpx;
+    font-size: 25rpx;
+    color: rgba(0, 0, 0, .6);
+}
+
+.con {
+    padding: 30rpx;
+}
+
+.t {
+    font-size: 30rpx;
+    padding: 0 30rpx;
+    line-height: 48rpx;
+    color: rgba(0, 0, 0, .6);
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.footer {
+    padding: 50rpx 30rpx 130rpx 30rpx;
+    font-size: 30rpx;
+    color: rgba(0, 0, 0, .4);
+}
+
+image {
+    width: 100%;
+}

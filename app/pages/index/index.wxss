@@ -1,0 +1,51 @@
+@import "../../colorui/animation.wxss";
+
+.index-img {
+    background-image: re;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+}
+
+.header-title {
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.scroll {
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    width: 90%;
+    min-height: 210rpx;
+    background: #ffffff;
+    border-radius: 20rpx;
+    margin: auto auto 40rpx;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+
+.card-icon {
+    width: 110rpx;
+    height: 110rpx;
+    float: left;
+    margin: 50rpx 35rpx;
+}
+
+.card-t1 {
+    font-size: 45rpx;
+    padding-top: 50rpx;
+    font-weight: bolder;
+}
+
+.card-t2 {
+    padding: 25rpx 35rpx 35rpx 25rpx;
+    line-height: 40rpx;
+    font-size: 27rpx;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, .6);
+}

@@ -1,0 +1,81 @@
+<cu-custom bgColor="bg-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">个人信息</view>
+</cu-custom>
+
+<form bindsubmit="submit">
+    <view class="cu-form-group margin-top">
+        <view class="title">真实姓名</view>
+        <input value="{{userInfo.name}}" name="name" placeholder="请输入你的真实姓名"></input>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">联系方式</view>
+        <input value="{{userInfo.mobile}}" name="mobile" placeholder="请输入你的联系方式"></input>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">身份证号</view>
+        <input value="{{userInfo.number}}" name="number" placeholder="请输入你的身份证号"></input>
+    </view>
+
+    <view class="cu-form-group margin-top">
+        <view class="title">我的头像</view>
+        <view class="cu-avatar radius bg-gray" wx:if="{{userInfo.avatar}}">
+            <image class="avatar-image" src="{{userInfo.avatar}}"/>
+        </view>
+        <button wx:if="{{!userInfo.avatar}}" bind:tap="getUserInfo" class="cu-btn bg-green shadow">获取头像</button>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">性别选择</view>
+        <picker bindchange="PickerChange" value="{{gender}}" range="{{picker}}">
+            <view class="picker">
+                {{gender ? gender : '请选择你的性别'}}
+            </view>
+        </picker>
+    </view>
+
+    <view class="cu-form-group">
+        <view class="title">返乡时间</view>
+        <picker mode="date" value="{{date}}" start="1960-01-01" end="2021-01-01" bindchange="DateChange">
+            <view class="picker">
+                {{date ? date : '请选择你的返乡时间'}}
+            </view>
+        </picker>
+    </view>
+
+    <view class="cu-form-group">
+        <view class="title">所在地区</view>
+        <picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker">
+                {{region.length !== 0 ? region[0] + '-' + region[1] + '-' + region[2] : '请选择你所在的地区' }}
+            </view>
+        </picker>
+    </view>
+
+
+    <view class="cu-bar bg-white margin-top">
+        <view class="action">
+            上传身份证正面照片
+        </view>
+        <view class="action">
+            {{imgList.length}}/1
+        </view>
+    </view>
+    <view class="cu-form-group">
+        <view class="grid col-4 grid-square flex-sub">
+            <view class="bg-img" wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
+                <image src='{{imgList[index]}}' mode='aspectFill'></image>
+                <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+                    <text class="cuIcon-close"></text>
+                </view>
+            </view>
+            <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<1}}">
+                <text class="cuIcon-cameraadd"></text>
+            </view>
+        </view>
+    </view>
+
+    <button formType="submit" class="btn bg-blue">确定保存</button>
+
+</form>
+
+<footer/>
