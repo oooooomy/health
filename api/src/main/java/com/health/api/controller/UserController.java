@@ -6,13 +6,24 @@ import com.health.api.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/user")
+@CrossOrigin("*")
 public class UserController {
 
     @Resource
     private UserService userService;
+
+    /**
+     * 查询所有用户
+     * @return .
+     */
+    @GetMapping("")
+    public ResponseResult<List<User>> findAll() {
+        return new ResponseResult<>(userService.findAll());
+    }
 
     /**
      * 用户登录或者注册

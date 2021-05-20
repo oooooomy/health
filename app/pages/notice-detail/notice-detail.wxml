@@ -4,20 +4,23 @@
 </cu-custom>
 
 <view class="title">
-    支持，需要小程序基础库版本不低于 2.3.1 在小程序插件中使用时
+    有效期仅半年？当然不是！戳穿这些有关疫苗的谣言
 </view>
 
 <view class="time">发布时间: 2021-05-19 18:09:00</view>
 
 <view class="con">
-    <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"/>
+    <image src="https://www.piyao.org.cn/2021-05/09/1211147686_16205482640851n.png"/>
 </view>
 
 <view class="t">
-    是否带上登录态信息。当 withCredentials 为 true 时，要求此前有调用过 wx.login 且登录态尚未过期，此时返回的数据会包含 encryptedData, iv 等敏感信息；当 withCredentials
-    为 false 时，不要求有登录态，返回的数据不包含 encryptedData, iv 等敏感信息。是否带上登录态信息。当 withCredentials 为 true 时，要求此前有调用过 wx.login
-    且登录态尚未过期，此时返回的数据会包含 encryptedData, iv 等敏感信息；当 withCredentials
-    为 false 时，不要求有登录态，返回的数据不包含 encryptedData, iv 等敏感信息。
+    针对“大规模接种新冠疫苗将导致病毒突变，产生‘免疫逃逸’”的说法，流言榜指出，在研发各种疫苗的时候，科研人员普遍选择了新冠病毒的整个刺突蛋白甚至整个灭活病毒，就是为了让疫苗刺激人体产生针对病毒各个部分的多种抗体，因此疫苗在病毒变异的情况下也不会马上就失去作用。
+
+　　新冠疫苗有效期只有半年？当然不是。有关部门介绍的“疫苗有效期6个月以上”是目前监测到的抗体水平时间，并不代表免疫有效的全周期。毕竟人类接触新冠病毒才一年多，疫苗问世时间就更短了。流言榜介绍，关于疫苗的免疫持久性研究仍在持续观察中。
+
+　　“接种新冠疫苗就不用再做核酸检测”的观点也是错的，因为有极少数受种者仍可能出现核酸检测阳性或发病，它们或者因为接种后免疫失败未能获得有效保护，或者疫苗接种后在产生保护效果之前就感染了新冠病毒。
+
+　　此外，一般的过敏症状，比如过敏性鼻炎、花粉过敏，跟疫苗成分没有直接关系，不影响新冠疫苗接种。
 </view>
 <view class="footer">
     <text style="float:right;">@疫情返乡人员管理系统</text>

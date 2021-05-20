@@ -4,20 +4,45 @@
       width="220">
     <div class="logo">
       <img src="../assets/logo.svg" alt="">
-      物流管理系统
+      人员返乡管理
     </div>
     <a-menu theme="dark" mode="inline">
-      <a-sub-menu v-for="(item, index) in menus" :key="index">
-        <span slot="title">
-          <a-icon :type="item.icon"/>
-          <span>{{ item.title }}</span>
-        </span>
-        <a-menu-item v-for="menu in item.children" :key="menu.title">
-          <router-link :to="menu.path">
-            {{ menu.title }}
-          </router-link>
-        </a-menu-item>
-      </a-sub-menu>
+      <a-menu-item key="1">
+        <router-link to="/user">
+          <a-icon type="usergroup-add"/>
+          返乡人员
+        </router-link>
+      </a-menu-item>
+      <a-menu-item key="2">
+        <router-link to="/out">
+          <a-icon type="export"/>
+          外出申请
+        </router-link>
+      </a-menu-item>
+      <a-menu-item key="3">
+        <router-link to="/material">
+          <a-icon type="deployment-unit"/>
+          物资申请
+        </router-link>
+      </a-menu-item>
+      <a-menu-item key="4">
+        <router-link to="/notice">
+          <a-icon type="notification" />
+          通告管理
+        </router-link>
+      </a-menu-item>
+      <a-menu-item key="5">
+        <router-link to="/message">
+          <a-icon type="message"/>
+          用户留言
+        </router-link>
+      </a-menu-item>
+      <a-menu-item key="6">
+        <router-link to="/admin">
+          <a-icon type="lock"/>
+          系统管理员
+        </router-link>
+      </a-menu-item>
     </a-menu>
   </a-layout-sider>
 </template>
@@ -27,61 +52,7 @@
 export default {
 
   data() {
-    return {
-      menus: [
-        {
-          title: '基础信息管理',
-          icon: 'home',
-          children: [
-            {title: '商品管理', path: '/commodity'},
-            {title: '来往单位', path: '/company'},
-            {title: '员工管理', path: '/employee'},
-            {title: '仓库管理', path: '/warehouse'},
-          ]
-        },
-        {
-          title: '销售信息管理',
-          icon: 'pay-circle',
-          children: [
-            {title: '销售开票', path: '/sale/create'},
-            {title: '销售记录', path: '/sale/record'},
-          ]
-        },
-        {
-          title: '配送信息管理',
-          icon: 'car',
-          children: [
-            {title: '申请配送', path: '/delivery/create'},
-            {title: '配送列表', path: '/delivery/list'},
-          ]
-        },
-        {
-          title: '运输信息管理',
-          icon: 'rocket',
-          children: [
-            {title: '车辆资料', path: '/vehicle'},
-            {title: '驾驶员资料', path: '/driver'},
-          ]
-        },
-        {
-          title: '系统决策管理',
-          icon: 'line-chart',
-          children: [
-            {title: '入库分析', path: '/analyze/in'},
-            {title: '出库分析', path: '/analyze/out'},
-          ]
-        },
-        {
-          title: '系统信息管理',
-          icon: 'tool',
-          children: [
-            {title: '安全设置', path: '/security'},
-            {title: '操作员管理', path: '/admin'},
-            {title: '权限列表', path: '/role'},
-          ]
-        },
-      ]
-    }
+    return {}
   },
 
 }

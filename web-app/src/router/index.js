@@ -22,7 +22,7 @@ const router = new VueRouter({
 //路由卫士
 router.beforeEach((to, from, next) => {
     NProgress.start()
-    to.meta.auth && !store.state.user.token ? next("/login") : next()
+    to.meta.auth && !store.state.user.details ? next("/login") : next()
 })
 
 router.afterEach(() => {

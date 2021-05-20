@@ -24,19 +24,6 @@
         </div>
       </a-button>
       <a-menu slot="overlay">
-        <a-menu-item>
-          <router-link to="/security">
-            <a-icon class="icon" type="smile"/>
-            个人中心
-          </router-link>
-        </a-menu-item>
-        <a-menu-item>
-          <router-link to="/role">
-            <a-icon class="icon" type="setting"/>
-            权限设置
-          </router-link>
-        </a-menu-item>
-        <a-menu-divider/>
         <a-menu-item @click="handleLogout">
           <a-icon class="icon" type="logout"/>
           退出登录

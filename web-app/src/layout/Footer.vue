@@ -1,6 +1,6 @@
 <template>
   <a-layout-footer :style="{ textAlign: 'center', letterSpacing: '1px' }">
-    物流管理系统 ©2021 Created by 信息工程学院 - 张霖
+    物流管理系统 ©2021 Created by 信息工程学院 - 张卿林
   </a-layout-footer>
 </template>
 

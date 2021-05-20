@@ -3,17 +3,17 @@
     <view slot="content">最新公告</view>
 </cu-custom>
 
-<view bind:tap="onClickItem" class="cu-card article no-card" wx:for="{{5}}" wx:key="index">
+<view bind:tap="onClickItem" class="cu-card article no-card" wx:for="{{1}}" wx:key="index">
     <view class="cu-item shadow">
         <view class="title">
-            <view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
+            <view class="text-cut">有效期仅半年？当然不是！戳穿这些有关疫苗的谣言</view>
         </view>
         <view class="content">
-            <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"></image>
+            <image src="https://www.piyao.org.cn/2021-05/09/1211147686_16205482640851n.png" mode="aspectFill"></image>
             <view class="desc">
-                <view class="text-content">折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+                <view class="text-content">随着新冠疫苗接种工作不断推进，一些错误观点也在网上传播。日前，由北京市科协、北京市委网信办、首都互联网协会指导发布的4月“科学”流言榜，戳穿了多条有关疫苗的谣言！</view>
                 <view>
-                    <view class="cu-tag bg-red light sm round">正义天使</view>
+                    <view class="cu-tag bg-red light sm round">辟谣专区</view>
                 </view>
             </view>
         </view>

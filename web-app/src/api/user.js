@@ -1,8 +1,8 @@
 import service from "../utils/request";
 
-export function FindAllRole(){
+export function FindAllUser() {
     return service({
-        url: '/role',
+        url: '/user',
         method: 'get'
     })
 }
