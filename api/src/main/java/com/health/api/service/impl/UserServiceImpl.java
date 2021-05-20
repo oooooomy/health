@@ -6,6 +6,7 @@ import com.health.api.model.params.UserLoginParams;
 import com.health.api.repository.UserRepository;
 import com.health.api.service.UserService;
 import com.health.api.utils.DataTimeUtil;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,12 @@ import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Value("${appId}")
+    private String appId;
+
+    @Value("${appSecret}")
+    private String appSecret;
 
     @Resource
     private UserRepository userRepository;
@@ -30,8 +37,8 @@ public class UserServiceImpl implements UserService {
     public User sign(String code) throws Exception {
         //微信获取openId url
         String url = "https://api.weixin.qq.com/sns/jscode2session?appid="
-                + "wx18783a513dd8b26f" + "&secret="
-                + "a45f500599adaeb41de4ee22ace71084" + "&js_code="
+                + appId + "&secret="
+                + appSecret + "&js_code="
                 + code + "&grant_type=authorization_code";
         //新建 RestTemplate
         RestTemplate restTemplate = new RestTemplate();
@@ -40,6 +47,9 @@ public class UserServiceImpl implements UserService {
         if (entity.getStatusCodeValue() != 200) throw new Exception("request error");
         //解析params
         UserLoginParams params = JSON.parseObject(entity.getBody(), UserLoginParams.class);
+
+        System.out.println(params);
+
         //解析失败 params为空
         if (params == null) throw new Exception("request params missing");
         //查询是否存在当前id的用户
